@@ -1,47 +1,22 @@
+<?php
+?>
+
 <!DOCTYPE html>
 <html lang="en">
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-        <title>YESclean PSTI-C</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" 
+                integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+        <title>Home-YESclean PSTI C</title>
         <link href="styleset.css" rel="stylesheet" />
     </head>
 
     <body>
-        <!--NAVBAR-->
-        <nav class="navbar navbar-expand-lg bg-dark navbar-dark fixed-top" >
-            <div class="container">
-                <a href="#" class="navbar-brand">YESclean</a>
-                
-                <button
-                    class="navbar-toggler"
-                    type="button"
-                    data-bs-toggle="collapse"
-                    data-bs-target="#navmenu"
-                    >
-                    <span class="navbar-toggler-icon"></span>
-                </button>
+        <?php include "layout/header.html" ?>
 
-                <div class="collapse navbar-collapse" id="navmenu">
-                    <ul class="navbar-nav ms-auto">
-                        <li class="nav-item">
-                            <a href="#projects" class="nav-link">Project</a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="#alasan" class="nav-link">Reason</a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="#team" class="nav-link">Our Team</a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
-
-    <!--HEADER/PROJECT-->
+    <!--PROJECT-->
     <section class="header bg-light text-center text-sm-start" id="projects">
-        
         <div class="container">
             <div class="d-flex align-items-center">
                 <div>
@@ -148,17 +123,7 @@
             </div>
         </div>
     </section>
-        
-        <!--FOOTER-->
-        <footer class="bg-secondary text-light p-3 text-center" id="footer">
-            <div class="container">
-                <p class="lead">Copyright &copy 2024 YESclean</p>
-            </div>    
-                
-        </footer>
 
-        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>   
-        
+    <?php include "layout/footer.html" ?>
     </body>
 </html>
