@@ -1,9 +1,25 @@
 <?php
+    include "service/database.php";
     session_start();                                //start si session
+    $logout_massages  = "";
+
     if(isset($_POST["logOut"])){
-        session_unset();                            //clear semua datanya
-        session_destroy();                          //destroy, ya keluar la tu data
-        header('location: index.php');
+        $username = $_SESSION["username"];
+        //$logout_time = date("Y-m-d H:i:s");         // Catat waktu logout
+        
+        try{
+            $sql = "INSERT INTO tamu_keluar(username_pengguna) VALUES('$username')";
+            if($db->query($sql)) {
+                $logout_massages = "SIGN OUT succeed!";
+            }else{
+                $logout_massages = "SIGN OUT doesn't run successfully, try again";
+            }
+        }catch(mysqli_sql_exception){
+            $logout_massages = "ada error bray, benerin dulu coba";
+        }
+        session_unset();                            // clear semua datanya
+        session_destroy();                          // destroy, ya keluar la tu data
+        header('location: register.php');
     }
 ?>
 
@@ -21,14 +37,9 @@
 <body>
     <?php include "layout/header.html" ?>
     <section class="header bg-light text-center text-sm-start">
-        <div class="container">
-            <div class="d-flex align-items-center">
+            <div class="container d-flex align-items-center">
                 <h2>Hai <span class="text-warning"> <?= $_SESSION["username"] ?> </span></h2>
-                <form action="dashboard.php" method="POST">
-                    <button type="submit" class="btn btn-warning" name="logOut" >LOG OUT</button>
-                </form>
             </div>
-        </div>
     </section>
 
     <section class="header bg-light text-center text-sm-start" id="projects">
