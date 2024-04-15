@@ -40,8 +40,8 @@
                             echo "
                             <tr>
                                 <td align='center'>$no</td>
-                                <td>$tampil[username_pengguna]</td>
-                                <td>$tampil[keperluan]</td>
+                                <td align='start'>$tampil[username_pengguna]</td>
+                                <td align='start'>$tampil[keperluan]</td>
                                 <td align='center'>$tampil[waktu_masuk]</td>
                                 <td align='center'>$tampil[waktu_keluar]</td>
                             </tr>";
