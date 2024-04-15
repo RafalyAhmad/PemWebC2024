@@ -1,0 +1,13 @@
+.header {
+    margin:50px;
+    padding: 10px;
+}
+
+#team img{
+    height: 150px;
+    width: 150px;
+}
+
+#footer p{
+    margin-bottom: -5px;
+}
