@@ -10,9 +10,9 @@
         try{
             $sql = "INSERT INTO tamu_keluar(username_pengguna) VALUES('$username')";
             if($db->query($sql)) {
-                $logout_massages = "SIGN OUT succeed!";
+                $logout_massages = "LOG OUT succeed!";
             }else{
-                $logout_massages = "SIGN OUT doesn't run successfully, try again";
+                $logout_massages = "LOG OUT doesn't run successfully, try again";
             }
         }catch(mysqli_sql_exception){
             $logout_massages = "ada error bray, benerin dulu coba";
@@ -38,7 +38,7 @@
     <?php include "layout/header.html" ?>
     <section class="header bg-light text-center text-sm-start">
             <div class="container d-flex align-items-center">
-                <h2>Hai <span class="text-warning"> <?= $_SESSION["username"] ?> </span></h2>
+                <h2>Hai <span class="text-warning"><?= $_SESSION["username"] ?></span></h2>
             </div>
     </section>
 

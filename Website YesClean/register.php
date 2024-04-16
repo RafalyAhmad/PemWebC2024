@@ -16,7 +16,7 @@
             $sql = "INSERT INTO users(username_pengguna, password_pengguna) VALUES('$username', '$password')";
 
             if($db->query($sql)) {
-                $register_massage = "REGISTERED, go click that SIGN IN option!";
+                $register_massage = "REGISTERED, go click that LOG IN option!";
                 }else{
                 $register_massage = "YOUR REGISTER doesn't run successfully, try again";
                 }

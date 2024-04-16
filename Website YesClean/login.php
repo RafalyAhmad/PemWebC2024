@@ -8,7 +8,7 @@
         header("location: dashboard.php");
     }
 
-    if(isset($_POST['signIn'])){
+    if(isset($_POST['logIn'])){
         $username   = $_POST['username'];
         $password   = $_POST['password'];
         $keperluan  = $_POST['keperluan'];
@@ -25,9 +25,9 @@
             
             $sql = "INSERT INTO tamu_masuk(username_pengguna, keperluan) VALUES('$username', '$keperluan')";
             if($db->query($sql)) {
-                $login_massage = "SIGN IN succeed!";
+                $login_massage = "LOG IN succeed!";
             }else{
-                $login_massage = "SIGN IN doesn't run successfully, try again";
+                $login_massage = "LOG IN doesn't run successfully, try again";
             }
         }else{
             $login_massage= "AKUN TIDAK DITEMUKAN";
@@ -50,14 +50,14 @@
     <body>
         <?php include "layout/header.html" ?>
         <i><?= $login_massage ?></i>
-        <section class="header bg-light text-center text-sm-start" id="signIn">
+        <section class="header bg-light text-center text-sm-start" id="logIn">
             <div class="container">
                 <h3>LOG IN</h3>
                 <form action="login.php" method="POST">
                     <input type="text" placeholder="Username" name="username">
                     <input type="password" placeholder="Password" name="password">
                     <input type="text" placeholder="Keperluan" name="keperluan">
-                    <button type="submit" class="btn btn-warning" name="signIn" >LOG IN</button>
+                    <button type="submit" class="btn btn-warning" name="logIn" >LOG IN</button>
                 </form>
             </div>
         </section>

@@ -31,11 +31,10 @@
                     </thead>
                     <tbody>
                         <?php
-                        include "koneksi.php";
+                        include "service/database.php";
                         $no=1;
-                        $ambilData= mysqli_query($koneksi, "SELECT * FROM tamu_masuk, tamu_keluar
+                        $ambilData= mysqli_query($db, "SELECT * FROM tamu_masuk, tamu_keluar
                         WHERE tamu_masuk.id_tamu_masuk = tamu_keluar.id_tamu_keluar") or die(mysqli_error($koneksi));
-
                         while($tampil = mysqli_fetch_array($ambilData)){
                             echo "
                             <tr>

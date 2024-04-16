@@ -10,4 +10,7 @@ if($db->connect_error){
     echo "database rusak";
     die("error!");
 }
+
+//$koneksi    = mysqli_connect("localhost", "root", "", "buku_tamu")
+//or die(mysqli_connect_error());
 ?>
