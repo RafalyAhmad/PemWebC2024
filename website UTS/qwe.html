@@ -8,76 +8,61 @@
     <style>
         /* Style untuk footer */
         footer {
-            background-color: #002e38;
+            background-color: #001E47;
             color: rgb(255, 255, 255);
             padding: 20px;
         }
         
-        /* Style untuk gambar */
-        .gambar-footer {
-            width: 100px; /* Sesuaikan ukuran gambar */
-            height: auto;
-            margin: 0 10px;
-            font-size: 25px;
-        }
-        
-        /* Style untuk nama gambar */
-        .nama-gambar {
-            margin-top: 10px;
-            font-size: 15px;
-        }
-        
-        .office {
-            margin: 0 10px;
-        }
-        .office-2 {
+        .card-text {
+            margin-bottom: 5px;
             margin-right: 10px;
             font-size: 15px;
             color: #c1c1c1;
         }
 
         /* Style untuk logo sosial media */
-        .logo-sosial-media {
+        .sosial-media {
             width: 30px; /* Sesuaikan ukuran logo sosial media */
             height: 30px;
             margin: 0 10px; /* Jarak antara logo sosial media */
         }
 
         /* Style untuk mengelompokkan elemen dalam satu container */
-        .container {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            flex-wrap: wrap;
-        }
-
-        /* Style untuk mengatur margin antar elemen dalam container */
-        .container > * {
-            margin-bottom: 10px;
+        .card{
+            background-color: #001E47;
+            color:white;
+            border: #001E47;
         }
     </style>
 </head>
 <body>
     <footer>
-        <div class="container">
-            <!-- Kelompok pertama: Logo perusahaan, nama perusahaan, dan logo sosial media -->
-            <div>
-                <img src="gambar.png" alt="Nama Perusahaan" class="gambar-footer">
-                <p class="nama-gambar">Nama Perusahaan</p>
-                <div>
-                    <a href="link_sosial_media"><img src="logo_sosmed.png"class="logo-sosial-media"></a>
-                    <a href="link_sosial_media"><img src="logo_twitter.png" class="logo-sosial-media"></a>
-                    <a href="link_sosial_media"><img src="logo_instagram.png" class="logo-sosial-media"></a>
+            <div class="row">
+                <div class="col-sm-6 mb-3 mb-sm-0">
+                  <div class="card">
+                    <div class="card-body">
+                        <h2 class="card-title"><img src="logo.png" class="card-title">YESclean</h2>
+                        <p></p>
+                        <a href="link_sosial_media"><img src="Img/sosmed-ig.png"class="sosial-media"></a>
+                        <a href="link_sosial_media"><img src="Img/sosmed-wa.png" class="sosial-media"></a>
+                        <a href="link_sosial_media"><img src="Img/yt.png" class="sosial-media"></a>
+                    </div>
+                  </div>
                 </div>
+                <div class="col-sm-6">
+                  <div class="card">
+                    <div class="card-body">
+                      <h2 class="card-title">Head Office</h2>
+                      <p class="card-text"><img src="Img/map-pin.svg" class="card-text"> Universitas Lampung</p>
+                      <p class="card-text"><img src="Img/phone.svg" class="card-text"> 0899-5739-124</p>
+                    </div>
+                  </div>
+                </div>
+                </div>
+            <div class="card-footer">
+                &copy YESclean, All Right Reserved.
             </div>
-            
-            <!-- Kelompok kedua: Head Office, alamat, dan telepon -->
-            <div>
-                <h1 class="office">Head Office</h1>
-                <p class="office-2"><img src="map-pin.svg" class="office-2"> Alamat</p>
-                <p class="office-2"><img src="phone.svg" class="office-2">Telepon</p>
-            </div>
-        </div>
+          </div>
     </footer>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
  

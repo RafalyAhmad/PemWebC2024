@@ -11,3 +11,29 @@
 #footer p{
     margin-bottom: -5px;
 }
+footer {
+    background-color: #001E47;
+    color: rgb(255, 255, 255);
+    padding: 20px;
+}
+
+.card-text {
+    margin-bottom: 5px;
+    margin-right: 10px;
+    font-size: 15px;
+    color: #c1c1c1;
+}
+
+/* Style untuk logo sosial media */
+.sosial-media {
+    width: 30px; /* Sesuaikan ukuran logo sosial media */
+    height: 30px;
+    margin: 0 10px; /* Jarak antara logo sosial media */
+}
+
+/* Style untuk mengelompokkan elemen dalam satu container */
+.card{
+    background-color: #001E47;
+    color:white;
+    border: #001E47;
+}
