@@ -8,6 +8,9 @@
     width: 150px;
 }
 
+.Our{
+    color:#001E47;
+}
 #footer p{
     margin-bottom: -5px;
 }
@@ -24,6 +27,16 @@ footer {
     color: #c1c1c1;
 }
 
+.Nama{
+    color:black;
+}
+.npm{
+    color:black;
+}
+
+.text{
+    color:white;
+}
 /* Style untuk logo sosial media */
 .sosial-media {
     width: 30px; /* Sesuaikan ukuran logo sosial media */
