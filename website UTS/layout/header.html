@@ -1,0 +1,50 @@
+<!--NAVBAR-->
+<nav class="navbar shadow navbar-expand-lg fixed-top" style="background-color: #001E47" data-bs-theme="dark">
+    <div class="container">
+        <img src="img/Logo Nama.png" style="max-width: 150px; padding-right: 5px;">
+        <a href="dashboard.php" class="navbar-brand "></a>
+        
+        <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navmenu"
+            >
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navmenu">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item">
+                    <a href="dashboard.php" class="nav-link">Beranda</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#layanan" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Layanan
+                    </a>
+                    <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="Cleaning Service.php">Cleaning Service</a></li>
+                    <li><a class="dropdown-item" href="Property Service.php">Property Service</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item">
+                    <a href="#kontak" class="nav-link">Kontak</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#kontributor" class="nav-link">Kontributor</a>
+                </li>
+            </ul>
+        </div>   
+           
+        <form action="dashboard.php" method="POST">
+            <button 
+            type="submit" 
+            class="btn btn-secondary" 
+            name="logOut" 
+            action="dashboard.php" 
+            method="POST"
+            >Log Out
+            </button>
+        </form>          
+    </div>
+</nav>

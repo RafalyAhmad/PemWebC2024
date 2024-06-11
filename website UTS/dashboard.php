@@ -1,3 +1,28 @@
+<?php
+    include "service/database.php";
+    session_start();                                //start si session
+    $logout_massages  = "";
+
+    if(isset($_POST["logOut"])){
+        $username = $_SESSION["username"];
+        //$logout_time = date("Y-m-d H:i:s");         // Catat waktu logout
+        
+        try{
+            $sql = "INSERT INTO tamu_keluar(username_pengguna) VALUES('$username')";
+            if($db->query($sql)) {
+                $logout_massages = "LOG OUT succeed!";
+            }else{
+                $logout_massages = "LOG OUT doesn't run successfully, try again";
+            }
+        }catch(mysqli_sql_exception){
+            $logout_massages = "ada error bray, benerin dulu coba";
+        }
+        session_unset();                            // clear semua datanya
+        session_destroy();                          // destroy, ya keluar la tu data
+        header('location: index.php');
+    }
+?>
+
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -6,53 +31,15 @@
         <link 
             href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" 
             rel="stylesheet" 
-            integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous"
-            />
+            integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" 
+            crossorigin="anonymous"/>
         <link rel="icon" href="img/logo white.png" type="image/x-icon">
         <title>Beranda | YESclean Indonesia</title>
         <link href="styleset.css" rel="stylesheet" />
     </head>
 
     <body>
-        <!--NAVBAR-->
-        <nav class="navbar shadow navbar-expand-lg fixed-top" style="background-color: #001E47" data-bs-theme="dark">
-            <div class="container">
-                <img src="img/Logo Nama.png" style="max-width: 150px; padding-right: 5px;">
-                <a href="index.html" class="navbar-brand "></a>
-                
-                <button
-                    class="navbar-toggler"
-                    type="button"
-                    data-bs-toggle="collapse"
-                    data-bs-target="#navmenu"
-                    >
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-
-                <div class="collapse navbar-collapse" id="navmenu">
-                    <ul class="navbar-nav ms-auto">
-                        <li class="nav-item">
-                            <a href="index.html" class="nav-link disabled" aria-disabled=true>Beranda</a>
-                        </li>
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#layanan" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                Layanan
-                            </a>
-                            <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="Cleaning Service.html">Cleaning Service</a></li>
-                            <li><a class="dropdown-item" href="Property Service.html">Property Service</a></li>
-                            </ul>
-                        </li>
-                        <li class="nav-item">
-                            <a href="#kontak" class="nav-link">Kontak</a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="#kontributor" class="nav-link">Kontributor</a>
-                        </li>
-                    </ul>
-                </div>                
-            </div>
-        </nav>
+    <?php include "layout/header.html" ?>
 
     <!--HEADER-->
     <section class="bg-white text-center text-sm-start img-fluid" style="padding: 85px; background-image: url('img/header\ background.jpg'); background-size: 1550px" id="projects" >
@@ -235,38 +222,7 @@
         </div>
     </section>
 
-    <!--FOOTER-->
-    <footer>
-        <div class="container">
-          <div class="row ">
-                <div class="col-sm-6 mb-3 mb-sm-0">
-                  <div class="card">
-                    <div class="card-body">
-                        <img >
-                        <h2 class="card-title" style="margin-top: -22px"><img src="img/Logo Warna.png" style="max-width: 30px; padding-right: 5px;" class="card-title">YCI</h2>
-                        <p>PT. Yes Clean Indonesia</p>
-                        <a href="link_sosial_media"><img src="Img/sosmed-ig.png"class="sosial-media"></a>
-                        <a href="link_sosial_media"><img src="Img/sosmed-wa.png" class="sosial-media"></a>
-                        <a href="link_sosial_media"><img src="Img/yt.png" class="sosial-media"></a>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-sm-6">
-                  <div class="card">
-                    <div class="card-body">
-                      <h2 class="card-title">Head Office</h2>
-                      <p class="card-text"><img src="Img/map-pin.svg" class="card-text"> Universitas Lampung</p>
-                      <p class="card-text"><img src="Img/phone.svg" class="card-text"> 0899-5739-124</p>
-                    </div>
-                  </div>
-                </div>
-            </div>
-            <div class="card-footer">
-              <hr class="hr" />
-                &copy Yes Clean Indonesia, All Right Reserved.
-            </div>
-        </div>
-      </footer>
+    <?php include "layout/footer.html" ?>
 
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>   
