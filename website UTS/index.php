@@ -79,7 +79,7 @@
                                 -
                                 <br>The greatest teacher is failure.
                             </p>
-                            <a href="https://drive.google.com/file/d/1griGf88KZAMjTYnwz_CniJ6pKkzLlU_I/view?usp=drive_link" class="btn btn-light">Here's my CV!</a>
+                            <a href="http://arnora.my.id/" class="btn btn-light">Here's my CV!</a>
                         </div>
                     </div>
                 </diw>
@@ -97,7 +97,7 @@
                                 <br>Kak Bagas, tutor dribble dong.
                                 
                             </p>
-                            <a href="https://drive.google.com/file/d/1ds8X0cQOjoGja4H_AOS9RUOb5mxotxKQ/view?usp=drive_link" class="btn btn-light">Here's my CV!</a>
+                            <a href="https://rafalyahmad.github.io/" class="btn btn-light">Here's my CV!</a>
                         </div>
                     </div>
                 </diw>
@@ -113,7 +113,7 @@
                             <p class="text">
                                 Gapailah mimpi setinggi langit, kalau jatuh seengganya pernah ke langit.
                             </p>
-                            <a href="https://drive.google.com/file/d/1tTk52b6tYtg5HQVVX8luERKWIDGoX3iF/view?usp=drive_link" class="btn btn-light">Here's my CV!</a>
+                            <a href="http://theofanihati.free.nf" class="btn btn-light">Here's my CV!</a>
                         </div>
                     </div>
                 </diw>
