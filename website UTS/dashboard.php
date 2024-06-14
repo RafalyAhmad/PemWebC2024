@@ -214,7 +214,7 @@
                             <p class="text">
                                 Inget kata Dorry "Terus berenang terus berenang".
                             </p>
-                            <a href="https://drive.google.com/file/d/1vaN5KuqBfTuZvQIFL53S7o_udbG3UMXy/view?usp=drive_link" class="btn btn-light">Here's my CV!</a>
+                            <a href="https://laurentiusnicholasc.github.io/web/" class="btn btn-light">Here's my CV!</a>
                         </div>
                     </div>
                 </diw>
