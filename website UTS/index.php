@@ -33,7 +33,7 @@
         <div class="collapse navbar-collapse" id="navmenu">
             <ul class="navbar-nav ms-auto">
                 <li class="nav-item">
-                    <a href="dashboard.php" class="nav-link">Beranda</a>
+                    <a href="index.php" class="nav-link">Beranda</a>
                 </li>
                 <li class="nav-item">
                     <a href="register.php" class="nav-link">Register</a>
