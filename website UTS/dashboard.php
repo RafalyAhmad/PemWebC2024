@@ -126,12 +126,12 @@
             <div class="d-flex justify-content-center">
                 <div class="bg-light rounded d-flex justify-content-center" style="width: fit-content; margin-right: 25px; padding: 8px;">
                     <div class="container border bg-white rounded align-items-center" style="margin: 10px; width: fit-content;">
-                        <a href="Cleaning Service.html" class="text-dark" style="text-decoration: none;"><h3><img src="img/icon cleaning.jpg" style="max-height: 100px;" alt="icon Cleaning Service">Cleaning Service</h3></a>
+                        <a href="Cleaning Service.php" class="text-dark" style="text-decoration: none;"><h3><img src="img/icon cleaning.jpg" style="max-height: 100px;" alt="icon Cleaning Service">Cleaning Service</h3></a>
                     </div>
                 </div>
                 <div class="bg-light rounded" style="width: fit-content; margin-left: 25px; padding: 8px;">
                     <div class="container border rounded bg-white" style="margin: 10px; width: fit-content;">
-                        <a href="Property Service.html" class="text-dark" style="text-decoration: none;"><h3><img src="img/icon property.jpg" style="max-height: 100px" alt="icon Property Service">Property Service</h3></a>
+                        <a href="Property Service.php" class="text-dark" style="text-decoration: none;"><h3><img src="img/icon property.jpg" style="max-height: 100px" alt="icon Property Service">Property Service</h3></a>
                     </div>
                 </div>
             </div>
