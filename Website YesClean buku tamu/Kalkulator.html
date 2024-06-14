@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kalkulator</title>
+    <style>
+      * {
+        margin: 0;
+        padding: auto;
+        box-sizing: border-box;
+        font-family: "Poppins", sans-serif;
+      }
+
+      body {
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-image: url("Blue.png");
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: cover;
+      }
+
+      .container {
+        position: relative;
+        max-width: 320px;
+        width: 100%;
+        background: white;
+        padding: 10px 20px 20px;
+        border-radius: 5px;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2),
+          0 6px 20px 0 rgba(0, 0, 0, 0.19);
+      }
+      .container-2 {
+        position: relative;
+        max-width: 320px;
+        width: 100%;
+        background: rgb(255, 255, 255);
+        padding: 10px 20px 20px;
+        border-radius: 5px;
+        margin-left: 50px;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2),
+          0 6px 20px 0 rgba(0, 0, 0, 0.19);
+      }
+
+      .title {
+        text-align: center;
+        margin-bottom: 10px;
+        font-size: 24px;
+        font-weight: bold;
+        color: rgb(29, 91, 206);
+        background-color: bl;
+      }
+
+      .history {
+        height: 60px;
+        width: 100%;
+        text-align: right;
+        margin-bottom: 10px;
+        font-size: 16px;
+        color: gray;
+      }
+
+      .display {
+        height: 80px;
+        width: calc(100% - 4px); /* mengurangi 4px karena ada border */
+        outline: none;
+        text-align: right;
+        margin-bottom: 10px;
+        font-size: 25px;
+        color: black;
+        pointer-events: none;
+      }
+
+      .buttons {
+        display: grid;
+        grid-gap: 10px;
+        grid-template-columns: repeat(4, 1fr);
+      }
+
+      .buttons button {
+        padding: 10px;
+        border-radius: 6px;
+        font-size: 20px;
+        border: none;
+        cursor: pointer;
+      }
+
+      .buttons button:active {
+        transform: scale(0.99);
+      }
+
+      .operator {
+        font-size: 20px;
+        font-weight: 600;
+        color: rgb(48, 68, 215);
+      }
+
+      /* Style untuk tulisan berjalan */
+      .marquee {
+        position: absolute;
+        top: 30px;
+        left: 50%;
+        padding: 5px;
+        transform: translateX(-50%);
+        font-size: 20px;
+        color: rgb(236, 23, 23);
+        white-space: nowrap;
+        background-color: rgb(5, 5, 5);
+        border-radius: 10px;
+      }
+
+      .tutorial {
+        font-size: large;
+        margin-top: 15px;
+        margin-bottom: 15px;
+        color: rgb(48, 68, 215);
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="marquee">
+      <marquee behavior="scroll" direction="left"
+        >Dibuat Oleh Ali, Arnora, Laurentius, Theofani</marquee
+      >
+    </div>
+
+    <div class="container">
+      <div class="title">Kalkulator YesClean</div>
+      <input type="text" class="display" />
+      <div class="buttons">
+        <button class="operator" data-value="AC">AC</button>
+        <button class="operator" data-value="DEL">DEL</button>
+        <button class="operator" data-value="%">%</button>
+        <button class="operator" data-value="/">/</button>
+
+        <button data-value="7">7</button>
+        <button data-value="8">8</button>
+        <button data-value="9">9</button>
+        <button class="operator" data-value="*">*</button>
+
+        <button data-value="4">4</button>
+        <button data-value="5">5</button>
+        <button data-value="6">6</button>
+        <button class="operator" data-value="-">-</button>
+
+        <button data-value="1">1</button>
+        <button data-value="2">2</button>
+        <button data-value="3">3</button>
+        <button class="operator" data-value="+">+</button>
+
+        <button data-value="0">0</button>
+        <button data-value="00">00</button>
+        <button data-value=".">.</button>
+        <button class="operator" data-value="=">=</button>
+      </div>
+    </div>
+
+    <div class="container-2">
+      <div class="title">History Kalkulator</div>
+      <input type="text" class="history-input" disabled />
+      <div class="tutorial">Cara Pakai Kalkulator</div>
+      Gunakan AC untuk menghapus seluruh isi operasi <br />
+      Gunakan DEL untuk menghapus satu angka dalam operasi <br />
+      Gunakan % untuk menghitung bentuk Persen<br />
+      Gunakan / untuk Pembagian <br />
+      Gunakan * untuk Perkalian <br />
+      Gunakan - untuk Pengurangan <br />
+      Gunakan + untuk Pertambahan <br />
+      Gunakan = untuk Melihat hasil Operasi <br />
+    </div>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        // Mendapatkan elemen-elemen yang diperlukan dari HTML
+        const display = document.querySelector(".display");
+        const buttons = document.querySelectorAll("button");
+        const historyInput = document.querySelector(".history-input");
+
+        // Menambahkan event listener untuk setiap tombol
+        buttons.forEach((button) => {
+          button.addEventListener("click", function () {
+            // Mendapatkan nilai tombol yang diklik
+            const value = button.getAttribute("data-value");
+
+            // Menangani operasi tombol
+            if (value === "AC") {
+              // Menghapus semua
+              display.value = "";
+            } else if (value === "DEL") {
+              // Menghapus satu karakter
+              display.value = display.value.slice(0, -1);
+            } else if (value === "=") {
+              // Melakukan perhitungan
+              try {
+                const result = eval(display.value);
+                display.value = result;
+                historyInput.value = result;
+              } catch (error) {
+                display.value = "Error";
+              }
+            } else {
+              // Menambahkan nilai ke layar
+              display.value += value;
+            }
+          });
+        });
+      });
+    </script>
+  </body>
+</html>
