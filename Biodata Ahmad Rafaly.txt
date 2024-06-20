@@ -2,4 +2,5 @@ Biodata Ahmad Rafaly
 
 Nama : Ahmad Rafaly
 NPM : 2215061011
+Kelas : PSTI C
 Alamat : Tanjung Senang
